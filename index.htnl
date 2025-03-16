@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web 前端开发技术课程仓库</title>
+</head>
+<body>
+    <h1>小鬼个人介绍</h1>
+    <div>
+        <h2>表单元素</h2>
+        <form action="https://baike.baidu.com/item/%e5%b0%8f%e9%ac%bc/22351766">
+        <input type="text">
+        <input type="submit" value="提交">
+    </form>
+    </div>
+    <div>
+    <p>
+        基础信息
+<ol>
+    <li>
+        中文名:王琳凯
+    </li>
+    <li>
+        出生日期:1999年5月20日
+    </li>
+    <li>
+        籍贯：山东烟台
+    </li>  
+      <li>
+        身份:中国内地说唱男歌手、影视演员,北京现代音乐研修学院流行舞系2016级学生
+    </li>
+</ol>
+<ul>
+    <li>蔡徐坤</li>
+    <li>陈立农</li>
+    <li>范丞丞</li>
+    <li>林彦俊</li>
+    <li>尤长靖</li>
+</ul>
+</div>
+<div>
+    <h2>个人成就<br><span>这部分简要概括</span></h2>
+    <p>这是一段话,可以加入行内元素,比如a、img等。<a href="https://baike.baidu.com/item/%e5%b0%8f%e9%ac%bc/22351766">这是一个链接</a> 点击链接查看相关内容</p>
+</div>
+<div>
+    <p>
+    <img src="images\li.webp" alt="照片1.0" width="140">
+    <img src="images\lil.webp" alt="照片2.0" width="200">
+    </p>
+    <p><iframe src="//player.bilibili.com/player.html?isOutside=true&aid=377154674&bvid=BV1Xo4y1S7r8&cid=383727816&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="400"></iframe></p>
+    <p><img src="images\现代舞.svg" alt="现代舞" width="200"></p>
+</div>
+<div>
+    <h3>表格相关元素</h3>
+    <table>
+        <tr>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>性别</th>
+    </table>
+</div>
+</body>
+</html>
