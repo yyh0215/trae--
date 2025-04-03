@@ -218,8 +218,10 @@
         
         <div class="section">
             <h2>表单元素</h2>
-            <form action="https://baike.baidu.com/item/%e5%b0%8f%e9%ac%bc/22351766">
-                <input type="text" placeholder="搜索小鬼相关信息...">
+            <!-- 修改 action 属性为百度搜索的 URL，并添加 method="get" -->
+            <form action="https://www.baidu.com/s" method="get">
+                <!-- 添加 name="wd" 属性 -->
+                <input type="text" name="wd" placeholder="搜索小鬼相关信息...">
                 <input type="submit" value="提交">
             </form>
         </div>
