@@ -1,65 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>javaScript 核心语法学习</title>
+    <title>JavaScript 核心语法学习</title>
+    <!-- 添加样式，让代码块更易读 -->
+    <style>
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>JavaScript 核心语法学习</h1>
+    <p>本页面将展示 JavaScript 的一些核心语法，包括变量声明、数据类型、分支语句、循环语句和函数。</p>
+
+    <h2>变量声明和数据类型</h2>
+    <pre>
+        <code>
+            // 变量声明和基本操作
+            let a = 100;
+            // 注释掉 alert 语句，可取消注释查看弹出框显示变量 a 的值
+            // alert(a)
+            // 在控制台打印变量 a 的值
+            console.log(a);
+
+            // 声明一个常量 api_key，并赋值为 'ssssx-=-dddd'
+            const api_key = 'ssssx-=-dddd';
+            // 在控制台打印常量 api_key 的值
+            console.log(api_key);
+
+            // 在控制台打印 api_key 和布尔值 true 的数据类型
+            console.log(typeof api_key, typeof true);
+
+            // 声明一个名为 b 的变量，并赋值为字符串 '1'
+            let b = '1';
+            // 在控制台打印 a 和 b 拼接的结果
+            console.log(a + b);
+            // 在控制台打印 a 和将 b 转换为数字后相加的结果
+            console.log(a + Number(b));
+
+            // 声明一个名为 c 的变量，并赋值为字符串 '100'
+            let c = '100';
+            // 在控制台打印 a 和 c 的数据类型
+            console.log(typeof a, typeof c);
+            // 在控制台打印 a 和 c 宽松比较的结果
+            console.log(a == c);
+            // 在控制台打印 a 和 c 严格比较的结果
+            console.log(a === c);
+        </code>
+    </pre>
+
+    <h2>分支语句</h2>
+    <pre>
+        <code>
+            // 分支语句示例
+            let current_time = '12:20';
+            // 使用 if...else 语句进行条件判断
+            if (current_time === '12:20') {
+                // 如果 current_time 严格等于 '12:20'，在控制台打印 'go go go'
+                console.log('go go go');
+            } else {
+                // 否则，在控制台打印 '快去学前端设计'
+                console.log('快去学前端设计');
+            }
+        </code>
+    </pre>
+
+    <h2>循环语句</h2>
+    <pre>
+        <code>
+            // for 循环示例
+            for (let i = 1; i <= 18; i++) {
+                // 在控制台打印当前迭代的值
+                console.log(i);
+            }
+        </code>
+    </pre>
+    <pre>
+        <code>
+            // while 循环示例
+            let hug = 60;
+            // 使用 while 循环，只要 hug 大于 0 就继续循环
+            while (hug > 0) {
+                // 在控制台打印 '我要和你一起学习前端设计'
+                console.log('我要和你一起学习前端设计');
+                // 将 hug 的值减去 10
+                hug = hug - 10;
+            }
+        </code>
+    </pre>
+
+    <h2>函数</h2>
+    <pre>
+        <code>
+            // 无参数函数示例
+            function intro() {
+                // 在控制台打印 '我是一个学习前端设计的学生'
+                console.log('我是一个学习前端设计的学生');
+            }
+            // 调用 intro 函数
+            intro();
+        </code>
+    </pre>
+    <pre>
+        <code>
+            // 单参数函数示例
+            function intro2(content) {
+                // 在控制台打印包含传入参数的学习计划
+                console.log('以下是我的学习计划：' + String(content));
+            }
+            // 调用 intro2 函数，并传入参数 '这是传入的参数'
+            intro2('这是传入的参数');
+            // 在控制台打印 intro2 函数调用的返回值类型
+            console.log(typeof intro2('这是传入的参数'));
+        </code>
+    </pre>
+    <pre>
+        <code>
+            // 双参数函数示例
+            function intro3(content1, content2) {
+                // 在控制台打印包含两个传入参数的学习计划
+                console.log('以下是我的学习计划：' + String(content1) + String(content2));
+                // 返回包含两个传入参数的学习计划
+                return '以下是我的学习计划：' + String(content1) + String(content2);
+            }
+            // 调用 intro3 函数，并传入两个参数 '这是传入的参数1' 和 '这是传入的参数2'
+            intro3('这是传入的参数1', '这是传入的参数2');
+        </code>
+    </pre>
+    <pre>
+        <code>
+            // 带返回值函数示例
+            function intro4(content) {
+                // 在控制台打印传入的参数
+                console.log(content);
+                // 返回包含传入参数和固定字符串的结果
+                return content + '这是返回值';
+            }
+            // 调用 intro4 函数，并将返回值赋值给变量 result
+            let result = intro4('带返回值的函数');
+            // 在控制台打印变量 result 的值
+            console.log(result);
+        </code>
+    </pre>
+
     <script>
+        // 变量声明和基本操作
         let a = 100;
+        // 注释掉 alert 语句，可取消注释查看弹出框显示变量 a 的值
         // alert(a)
+        // 在控制台打印变量 a 的值
         console.log(a);
+
+        // 声明一个常量 api_key，并赋值为 'ssssx-=-dddd'
         const api_key = 'ssssx-=-dddd';
+        // 在控制台打印常量 api_key 的值
         console.log(api_key);
+
+        // 在控制台打印 api_key 和布尔值 true 的数据类型
         console.log(typeof api_key, typeof true);
+
+        // 声明一个名为 b 的变量，并赋值为字符串 '1'
         let b = '1';
+        // 在控制台打印 a 和 b 拼接的结果
         console.log(a + b);
+        // 在控制台打印 a 和将 b 转换为数字后相加的结果
         console.log(a + Number(b));
-        let c = '100'; // 原代码此处缺少分号，补充分号以符合规范
+
+        // 声明一个名为 c 的变量，并赋值为字符串 '100'
+        let c = '100';
+        // 在控制台打印 a 和 c 的数据类型
         console.log(typeof a, typeof c);
+        // 在控制台打印 a 和 c 宽松比较的结果
         console.log(a == c);
+        // 在控制台打印 a 和 c 严格比较的结果
         console.log(a === c);
-        // 分支语句
+
+        // 分支语句示例
         let current_time = '12:20';
-        if (current_time === '12:20') { // 建议使用 === 进行严格比较
+        // 使用 if...else 语句进行条件判断
+        if (current_time === '12:20') {
+            // 如果 current_time 严格等于 '12:20'，在控制台打印 'go go go'
             console.log('go go go');
         } else {
+            // 否则，在控制台打印 '快去学前端设计'
             console.log('快去学前端设计');
         }
-        // for 循环
+
+        // for 循环示例
         for (let i = 1; i <= 18; i++) {
+            // 在控制台打印当前迭代的值
             console.log(i);
         }
-        // while 循环
+
+        // while 循环示例
         let hug = 60;
-        while (hug > 0) { 
+        // 使用 while 循环，只要 hug 大于 0 就继续循环
+        while (hug > 0) {
+            // 在控制台打印 '我要和你一起学习前端设计'
             console.log('我要和你一起学习前端设计');
+            // 将 hug 的值减去 10
             hug = hug - 10;
         }
-        // 函数
+
+        // 无参数函数示例
         function intro() {
+            // 在控制台打印 '我是一个学习前端设计的学生'
             console.log('我是一个学习前端设计的学生');
         }
+        // 调用 intro 函数
         intro();
+
+        // 单参数函数示例
         function intro2(content) {
+            // 在控制台打印包含传入参数的学习计划
             console.log('以下是我的学习计划：' + String(content));
         }
+        // 调用 intro2 函数，并传入参数 '这是传入的参数'
         intro2('这是传入的参数');
-        console.log(typeof intro2('这是传入的参数')); // 原代码这行顺序可能会引起混淆，调整到调用函数之后打印类型
+        // 在控制台打印 intro2 函数调用的返回值类型
+        console.log(typeof intro2('这是传入的参数'));
+
+        // 双参数函数示例
         function intro3(content1, content2) {
+            // 在控制台打印包含两个传入参数的学习计划
             console.log('以下是我的学习计划：' + String(content1) + String(content2));
+            // 返回包含两个传入参数的学习计划
             return '以下是我的学习计划：' + String(content1) + String(content2);
         }
+        // 调用 intro3 函数，并传入两个参数 '这是传入的参数1' 和 '这是传入的参数2'
         intro3('这是传入的参数1', '这是传入的参数2');
+
+        // 带返回值函数示例
         function intro4(content) {
+            // 在控制台打印传入的参数
             console.log(content);
+            // 返回包含传入参数和固定字符串的结果
             return content + '这是返回值';
         }
+        // 调用 intro4 函数，并将返回值赋值给变量 result
         let result = intro4('带返回值的函数');
+        // 在控制台打印变量 result 的值
         console.log(result);
     </script>
-</head>
-<body>
-
 </body>
+
 </html>
 
