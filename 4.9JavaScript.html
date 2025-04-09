@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript 联系语法2</title>
+    <script>
+        // 类和对象学习
+        // 1. 定义一个类，类名首字母建议大写
+        class Student {
+            // 构造函数
+            constructor(name, age, school, gender) {
+                this.name = name;
+                this.age = age;
+                this.school = school;
+                this.gender = gender;
+            }
+            // 方法
+            learn(subject = "语文") {
+                // 使用反引号进行字符串模板替换
+                console.log(`${this.name} 正在学习 ${subject},真不错！`);
+            }
+            exam(subject = "语文") {
+                // 使用反引号进行字符串模板替换
+                console.log(`${this.name} 正在考试 ${subject}`);
+            }
+        }
+        // 2. 创建对象
+        let xiaoming = new Student("小明", 18, "西北民族大学", "男");
+        xiaoming.learn("英语");
+        xiaoming.exam();
+
+        // 定义 teacher 类，类名首字母建议大写
+        class Teacher extends Student {
+            constructor(name, age, school, gender, subject, experience, level) {
+                super(name, age, school, gender);
+                // 修正变量引用错误
+                this.major = subject;
+                this.experience = experience;
+                this.level = level; // 原代码中遗漏了对 level 属性的赋值
+            }
+            intern(corporation) {
+                // 使用反引号进行字符串模板替换
+                console.log(`${this.name} 正在${corporation}实习, 获得实践经验加一`);
+                // 调用父类的 exam 方法
+                super.exam();
+            }
+        }
+
+        // 假设这里应该是创建 teacher 类的对象
+        let xiaohong = new Teacher("小红", 20, "西北民族大学", "女", "语言学", 1, 1);
+        xiaohong.intern("百度");
+
+        // 回调函数，函数作为参数传递给另一个函数
+        console.log("回调函数");
+
+        setTimeout(() => {
+            console.log("我是回调函数");
+        }, 1000);
+
+        console.log("我是主函数");
+
+    </script>
+</head>
+<body>
+    <!-- 修改此处的语法错误，正确的 id 和引号使用 -->
+    <h1 id="demo" onclick="alert('给点反应')">这是一个标题的原始内容</h1>
+    <div>
+        <p id="anotherp">这是一个段落</p>
+    </div>
+
+    <script>
+        let myh1 = document.getElementById("demo");
+        console.log(myh1);
+        //1.改变元素内容
+        if (myh1) {
+            myh1.innerHTML = "这是一个新的标题";
+            //2.改变元素样式
+            myh1.style.color = "red";
+        }
+
+        let myp = document.getElementById("anotherp");
+        if (myp) {
+            myp.onclick = function () {
+                alert("你好呀！");
+            }
+        }
+
+        window.onload = function () {
+            alert("页面加载完成");
+        }
+    </script>
+</body>
+</html>
