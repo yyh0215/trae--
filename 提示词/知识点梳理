@@ -1,0 +1,40 @@
+请逐行解释以下内容
+并对知识点进行总结,用mermald可视化知识点之间的关系
+<content>
+(async () => {
+const dates = await getRepoCommitDates('yyh0215', 'trae--');
+ console.log('原始提交日期:', dates);
+
+ const formattedDates = formatCommitDates(dates);
+ console.log('美化后的提交日期:', formattedDates);
+ 
+ document.getElementById('demo').innerHTML = 
+ `<h2>提交历史</h2>
+<ul>
+${formattedDates.map(date => `<li>${date}</li>`).join('')}
+</ul>`;
+ })();
+</content>
+
+
+page.js知识点总结
+### 1. React 函数组件
+- **定义方式**: 使用 `function` 关键字定义函数组件，并通过 `export default` 导出(`export default function Hello() { ... }`)。
+- **作用**: 函数组件是 React 中描述 UI 的基本单元，通过返回 JSX 结构渲染页面内容。
+
+### 2. JSX 语法
+- **结构**: 组件返回的内容是 JSX（JavaScript XML），允许在 JavaScript 中编写类似 HTML 的标记（如 `<div>`、`<h1>`）。
+- **特性**: JSX 会被 Babel 转换为 `React.createElement()` 调用，最终渲染为 DOM 元素。
+
+### 3. 内联样式（Inline Styles）
+- **语法**: 通过 `style` 属性传递一个 JavaScript 对象(`style={{ ... }}`)，属性名使用驼峰式（如 `textAlign` 而非 `text-align`）。
+- **具体样式**:
+  - `color: 'red'`: 设置文字颜色为红色。
+  - `textAlign: 'center'`: 文字水平居中对齐。
+  - `width: '100%'`: 元素宽度占父容器的 100%。
+  - `margin: '20px 0'`: 上下边距 20px，左右边距 0。
+  - `textShadow: '3px 3px 6px rgba(128, 128, 128, 0.8)'`: 文字阴影（水平偏移 3px，垂直偏移 3px，模糊半径 6px，灰色半透明）。
+
+### 4. 组件结构规范
+- **容器包裹**: 即使只有一个子元素（如 `<h1>`），也用 `<div>` 包裹，避免组件碎片化，符合 React 推荐的单一根节点原则。
+        
