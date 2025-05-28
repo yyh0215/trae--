@@ -1,1 +1,1 @@
-why computer so dificult!
+Why computer so dificult!
