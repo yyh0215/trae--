@@ -1,0 +1,10 @@
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	symlinks = false
+	ignorecase = true
+[remote "gh-repo-clone-yyh0215/my-app"]
+	url = gh repo clone yyh0215/my-app
+	fetch = +refs/heads/*:refs/remotes/gh-repo-clone-yyh0215/my-app/*
